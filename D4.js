@@ -29,7 +29,7 @@ return somma;
 */
 
 function crazyDiff(n1){
-let differenza=Mathlab(n1-19);
+let differenza=Math.abs(n1-19);
 if (n1>19){
     differenza=differenza*3
     console.log("la differenza assoluta moltiplicata per 3 è:",differenza)
@@ -65,7 +65,7 @@ function boundary(n){
 
 function epify(string){
     
-    if (string.startsWith("EPICODE")){
+    if (string.StartsWith("EPICODE")){
         console.log("parola originale:",string)
         return string
     }
@@ -81,30 +81,66 @@ function epify(string){
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
+function check3and7(num){
+    if(num % 3===0){
+        console.log("il numero inserito è multiplo di 3")
+        return true
+    }
+    else if (num % 7=== 0){
+        console.log("il numero inserito è multiplo di 7 ")
+        return true
+     }
+     else{
+        console.log("il numero inserito non è multiplo ne di 3 ne di 7")
+     }
+     return false
+    }
+
 
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString(string){
+let stringadivisa=string.split(" ")
+let stringainvertita=stringadivisa.reverse ()
+let stringa_finale=stringainvertita.join(" ")
+return stringa_finale;
+}
+console.log("la parola invertita è:",stringa_finale)
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
-*/
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+Non ci sono riuscito 
+
+ */
+
+
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(stringa){
+return stringa.slice(1,-1)
+}
+console.log("la stringa modificata sarà:",stringa)
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
+function giveMeRandom(n){
+let contenitore=[];
+for (let i=0; i<=10; i++){
+    let numcas= Math.floor(Math.random ( ) *11);
+    contenitore.push(numcas)
+}
+}
+return contenitore;
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+
+ /*l'ho visto su internet non lo ricordavo */
